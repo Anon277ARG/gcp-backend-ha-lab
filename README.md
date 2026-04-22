@@ -31,6 +31,14 @@ La arquitectura actual está compuesta por:
 - subred configurada dentro del rango `10.0.0.0/24`
 - conectividad interna entre instancias validada
 
+gcp-backend-ha-lab/Capturas GCP
+/subred.png
+<p align="center">
+  <img src="Capturas GCP/subred.png" alt="Panel de VMs en GCP" width="850">
+  <br>
+  <kbd>Figura 1</kbd> <br>
+  <em>"Captura del panel de subredes en Google Cloud. Se observa la segmentación regional de la red default, destacando la subred activa en southamerica-west1 (Santiago, Chile). Esta configuración asegura que los recursos del proyecto estén localizados geográficamente para minimizar la latencia hacia los usuarios finales en la región."</em>
+</p>
 ### Firewall
 Reglas configuradas mediante network tags.
 
