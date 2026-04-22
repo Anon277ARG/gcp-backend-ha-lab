@@ -62,7 +62,7 @@ Se utilizaron dos unmanaged instance groups:
 - uno por zona
 - cada uno contiene una VM
 
-[Panel que muestra VMs con IPs Privadas] gcp-backend-ha-lab/Capturas GCP/VMs.png
+[Panel que muestra VMs con IPs Privadas] (gcp-backend-ha-lab/Capturas GCP/VMs.png)
 <p align="center">
   <img src="screenshots/VMs.png" alt="Panel de VMs en GCP" width="850">
   <br>
