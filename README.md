@@ -62,6 +62,13 @@ Se utilizaron dos unmanaged instance groups:
 - uno por zona
 - cada uno contiene una VM
 
+[Panel que muestra VMs con IPs Privadas] gcp-backend-ha-lab/Capturas GCP/VMs.png
+<p align="center">
+  <img src="screenshots/VMs.png" alt="Panel de VMs en GCP" width="850">
+  <br>
+  <kbd>Figura 1</kbd> <br>
+  <em>"Captura del panel de Compute Engine mostrando la implementación multi-zona. Se observa la ausencia de IPs públicas en las instancias para garantizar la seguridad perimetral, permitiendo únicamente el acceso a través del Load Balancer o vía SSH/IAP."</em>
+</p>
 Named port configurado:
 
 - `http-backend:5000`
