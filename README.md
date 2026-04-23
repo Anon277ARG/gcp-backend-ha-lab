@@ -143,14 +143,13 @@ Se validó:
 - failover funcional al apagar una VM
 - health checks funcionando correctamente
 
+### Problemas encontrados y resueltos
 
-<details>
-<summary><b>🔍 Ver Log de Troubleshooting (Click para desplegar)</b></summary>
-
-- **Error de sintaxis:** Corrección de rutas en los requests del health check.
-- **Conflictos de puerto:** Liberación del puerto 5000 ocupado por sesiones previas.
-- **Startup Scripts:** Identificación del bloqueo de `apt` por procesos automáticos del sistema (`unattended-upgrades`).
-</details>
+- error de sintaxis en requests del health check
+- puerto `5000` ocupado por procesos previos
+- errores al intentar arrancar el servicio Python
+- confusión entre archivos locales, Cloud Shell y archivos dentro de la VM
+- uso inicial de `apt` en startup script bloqueado por `unattended-upgrades`
 
 
 ## Demo visual
@@ -215,3 +214,15 @@ Este proyecto permitió entender en la práctica:
 - relación entre backend service, instance groups y health checks
 - importancia de validar cada capa por separado
 - problemas reales de debugging al trabajar con infraestructura
+
+---
+
+<div align="center">
+  <p>
+    ¿Querés conectar conmigo o saber más sobre mis proyectos en Google Cloud? <br>
+    <a href="[TU_LINK_DE_LINKEDIN_AQUI](https://www.linkedin.com/in/ulises-acu%C3%B1a-bianchi-6a36961b4/)">
+      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Profile">
+    </a>
+  </p>
+  <sub>Desarrollado con ❤️ Ulises Acuña Bianchi - 2026</sub>
+</div>
