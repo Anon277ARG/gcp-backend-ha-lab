@@ -155,6 +155,34 @@ Se validó:
 Como prueba visual del balanceo, cada backend sirve contenido diferente.  
 En una de las pruebas, cada VM mostró una imagen distinta a través del Load Balancer, permitiendo observar claramente el cambio de backend al refrescar.
 
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="pipifeliz.jpg" width="300px"><br>
+        <b>Instancia A: Nodo 1</b><br>
+        <i>Estado: Pipi Feliz</i>
+      </td>
+      <td align="center">
+        <img src="pipienojado.jpg" width="300px"><br>
+        <b>Instancia B: Nodo 2</b><br>
+        <i>Estado: Pipi Enojado</i>
+      </td>
+    </tr>
+  </table>
+  <p align="center">
+    <sub><b>Evidencia técnica:</b> El Load Balancer distribuye las peticiones entre los distintos backends, 
+    permitiendo que cada nodo responda con una imagen diferente según la lógica del script <code>app.py</code>.</sub>
+  </p>
+
+  <br>
+
+  <p align="center">
+    <b>Y para finalizar con la retórica de LinkedIn...</b><br>
+    les presento al ser más hermoso del mundo: <b>Pipi (Máximo)</b>, el verdadero motor y la inspiración detrás de cada línea de código y cada configuración en la nube. 👶💙
+  </p>
+</div>
+
 ## Próximos pasos
 
 - validar instance template corregido
