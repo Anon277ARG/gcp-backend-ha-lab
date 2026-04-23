@@ -104,8 +104,8 @@ Se configuró un Application Load Balancer HTTP externo con:
 <p align="center">
   <img src="Capturas GCP/loadbalancer.png" alt="Panel de VMs en GCP" width="850">
   <br>
-  <kbd>Figura 5</kbd> <br>
-  <em>"Verificación de Health Checks exitosa: Confirmación de disponibilidad de las instancias mediante el puerto TCP:5000, validando la correcta configuración de las reglas de Firewall Ingress."</em>
+  <kbd>Figura 6</kbd> <br>
+  <em>"En la fase inicial de pruebas (como se ve en la captura), el gráfico de monitoreo registró tráfico en estado 'Invalid'. Esto ocurrió porque el balanceador recibió peticiones antes de que las instancias completaran el proceso de Health Check. Una vez que el firewall permitió el paso de las sondas de salud y las instancias pasaron a estado 'Healthy', el tráfico comenzó a fluir correctamente hacia los Backends, estabilizando el servicio."</em>
 </p>
 
 ## Funcionamiento
