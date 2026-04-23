@@ -50,6 +50,14 @@ Reglas relevantes:
 - permitir health checks de Google Cloud
 - permitir tráfico del Load Balancer hacia los backends
 
+<p align="center">
+  <img src="Capturas GCP/firewall.png" alt="Panel de VMs en GCP" width="850">
+  <br>
+  <kbd>Figura 1</kbd> <br>
+  <em>"apertura selectiva del puerto 5000 y habilitación de Health Checks para el correcto funcionamiento del balanceador de carga. Esta configuración garantiza que solo el tráfico legítimo alcance las instancias, manteniendo la integridad de la red interna y optimizando la disponibilidad del servicio mediante el monitoreo constante del estado de las VMs."</em>
+</p>
+
+
 ### Backends
 Se crearon dos VMs manuales:
 
