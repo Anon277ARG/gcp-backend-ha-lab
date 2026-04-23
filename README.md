@@ -74,7 +74,7 @@ Cada backend responde contenido distinto, lo que permite validar visualmente la 
 <p align="center">
   <img src="Capturas GCP/VMs.png" alt="Panel de VMs en GCP" width="850">
   <br>
-  <kbd>Figura 1</kbd> <br>
+  <kbd>Figura 3</kbd> <br>
   <em>"Captura del panel de Compute Engine mostrando la implementación multi-zona. Se observa la ausencia de IPs públicas en las instancias para garantizar la seguridad perimetral, permitiendo únicamente el acceso a través del Load Balancer o vía SSH/IAP."</em>
 </p>
 
@@ -86,6 +86,13 @@ Se utilizaron dos unmanaged instance groups:
 Named port configurado:
 
 - `http-backend:5000`
+
+<p align="center">
+  <img src="Capturas GCP/instancegroups.png" alt="Panel de VMs en GCP" width="850">
+  <br>
+  <kbd>Figura 4</kbd> <br>
+  <em>"Vista detallada de los Unmanaged Instance Groups donde se configuró el mapeo de servicios mediante puertos con nombre (Named Ports). Esta definición es fundamental para que el Backend Service del Load Balancer pueda comunicarse con las aplicaciones que corren en el puerto TCP 5000 dentro de cada máquina virtual."</em>
+</p>
 
 ### Load Balancer
 Se configuró un Application Load Balancer HTTP externo con:
