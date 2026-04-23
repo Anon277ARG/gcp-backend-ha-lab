@@ -217,12 +217,11 @@ Este proyecto permitió entender en la práctica:
 
 ---
 
-<div align="center">
-  <p>
-    ¿Querés conectar conmigo o saber más sobre mis proyectos en Google Cloud? <br>
-    <a href="https://www.linkedin.com/in/ulises-acu%C3%B1a-bianchi-6a36961b4/" target="_blank">
-      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Profile">
-    </a>
-  </p>
+<p align="center">
+  ¿Querés conectar conmigo o saber más sobre mis proyectos en Google Cloud? <br>
+  <a href="https://www.linkedin.com/in/ulises-acu%C3%B1a-bianchi-6a36961b4/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Profile">
+  </a>
+  <br>
   <sub>Desarrollado con ❤️ Ulises Acuña Bianchi - 2026</sub>
-</div>
+</p>
