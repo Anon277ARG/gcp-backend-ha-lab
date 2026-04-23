@@ -159,12 +159,12 @@ En una de las pruebas, cada VM mostró una imagen distinta a través del Load Ba
   <table>
     <tr>
       <td align="center">
-        <img src="pipifeliz.jpg" width="300px"><br>
+        <img src="Capturas GCP/pipifeliz.png" width="300px"><br>
         <b>Instancia A: Nodo 1</b><br>
         <i>Estado: Pipi Feliz</i>
       </td>
       <td align="center">
-        <img src="pipienojado.jpg" width="300px"><br>
+        <img src="Capturas GCP/pipienojado.png" width="300px"><br>
         <b>Instancia B: Nodo 2</b><br>
         <i>Estado: Pipi Enojado</i>
       </td>
