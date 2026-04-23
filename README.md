@@ -101,6 +101,13 @@ Se configuró un Application Load Balancer HTTP externo con:
 - backend service basado en instance groups
 - health check HTTP al path `/` sobre puerto `5000`
 
+<p align="center">
+  <img src="Capturas GCP/loadbalancer.png" alt="Panel de VMs en GCP" width="850">
+  <br>
+  <kbd>Figura 5</kbd> <br>
+  <em>"Verificación de Health Checks exitosa: Confirmación de disponibilidad de las instancias mediante el puerto TCP:5000, validando la correcta configuración de las reglas de Firewall Ingress."</em>
+</p>
+
 ## Funcionamiento
 
 El Load Balancer distribuye tráfico entre dos backends privados ubicados en distintas zonas.
