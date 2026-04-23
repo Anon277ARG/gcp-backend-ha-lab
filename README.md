@@ -64,6 +64,13 @@ Se crearon dos VMs manuales:
 - una en `southamerica-west1-a`
 - una en `southamerica-west1-b`
 
+<p align="center">
+  <img src="Capturas GCP/app.py.png" alt="Panel de VMs en GCP" width="850">
+  <br>
+  <kbd>Figura 4</kbd> <br>
+  <em>"SScript app.py: Lógica del servidor web Flask configurada para responder por el puerto 5000. Cada instancia se gestiona de forma individual, permitiendo la ejecución del servicio y la muestra de imágenes dinámicas para validar visualmente que el balanceador de carga está distribuyendo el tráfico entre los diferentes nodos"</em>
+</p>
+
 Características:
 - sin IP pública
 - acceso por SSH
@@ -74,7 +81,7 @@ Cada backend responde contenido distinto, lo que permite validar visualmente la 
 <p align="center">
   <img src="Capturas GCP/VMs.png" alt="Panel de VMs en GCP" width="850">
   <br>
-  <kbd>Figura 3</kbd> <br>
+  <kbd>Figura 5</kbd> <br>
   <em>"Captura del panel de Compute Engine mostrando la implementación multi-zona. Se observa la ausencia de IPs públicas en las instancias para garantizar la seguridad perimetral, permitiendo únicamente el acceso a través del Load Balancer o vía SSH/IAP."</em>
 </p>
 
@@ -90,7 +97,7 @@ Named port configurado:
 <p align="center">
   <img src="Capturas GCP/instancegroups.png" alt="Panel de VMs en GCP" width="850">
   <br>
-  <kbd>Figura 4</kbd> <br>
+  <kbd>Figura 6</kbd> <br>
   <em>"Vista detallada de los Unmanaged Instance Groups donde se configuró el mapeo de servicios mediante puertos con nombre (Named Ports). Esta definición es fundamental para que el Backend Service del Load Balancer pueda comunicarse con las aplicaciones que corren en el puerto TCP 5000 dentro de cada máquina virtual."</em>
 </p>
 
@@ -104,7 +111,7 @@ Se configuró un Application Load Balancer HTTP externo con:
 <p align="center">
   <img src="Capturas GCP/loadbalancer.png" alt="Panel de VMs en GCP" width="850">
   <br>
-  <kbd>Figura 5</kbd> <br>
+  <kbd>Figura 7</kbd> <br>
   <em>"Verificación de Health Checks exitosa: Confirmación de disponibilidad de las instancias mediante el puerto TCP:5000, validando la correcta configuración de las reglas de Firewall Ingress."</em>
 </p>
 
@@ -123,7 +130,7 @@ Se validó:
 <p align="center">
   <img src="Capturas GCP/loadbalancermonitoring.png" alt="Panel de VMs en GCP" width="850">
   <br>
-  <kbd>Figura 6</kbd> <br>
+  <kbd>Figura 8</kbd> <br>
   <em>"En la fase inicial de pruebas (como se ve en la captura), el gráfico de monitoreo registró tráfico en estado 'Invalid'. Esto ocurrió porque el balanceador recibió peticiones antes de que las instancias completaran el proceso de Health Check. Una vez que el firewall permitió el paso de las sondas de salud y las instancias pasaron a estado 'Healthy', el tráfico comenzó a fluir correctamente hacia los Backends, estabilizando el servicio."</em>
 </p>
 
