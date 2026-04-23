@@ -53,7 +53,7 @@ Reglas relevantes:
 <p align="center">
   <img src="Capturas GCP/firewall.png" alt="Panel de VMs en GCP" width="850">
   <br>
-  <kbd>Figura 1</kbd> <br>
+  <kbd>Figura 2</kbd> <br>
   <em>"apertura selectiva del puerto 5000 y habilitación de Health Checks para el correcto funcionamiento del balanceador de carga. Esta configuración garantiza que solo el tráfico legítimo alcance las instancias, manteniendo la integridad de la red interna y optimizando la disponibilidad del servicio mediante el monitoreo constante del estado de las VMs."</em>
 </p>
 
@@ -71,19 +71,18 @@ Características:
 
 Cada backend responde contenido distinto, lo que permite validar visualmente la distribución de tráfico del Load Balancer.
 
-### Instance Groups
-Se utilizaron dos unmanaged instance groups:
-
-- uno por zona
-- cada uno contiene una VM
-
-[Panel que muestra VMs con IPs Privadas] (gcp-backend-ha-lab/Capturas GCP/VMs.png)
 <p align="center">
   <img src="Capturas GCP/VMs.png" alt="Panel de VMs en GCP" width="850">
   <br>
   <kbd>Figura 1</kbd> <br>
   <em>"Captura del panel de Compute Engine mostrando la implementación multi-zona. Se observa la ausencia de IPs públicas en las instancias para garantizar la seguridad perimetral, permitiendo únicamente el acceso a través del Load Balancer o vía SSH/IAP."</em>
 </p>
+
+### Instance Groups
+Se utilizaron dos unmanaged instance groups:
+
+- uno por zona
+- cada uno contiene una VM
 Named port configurado:
 
 - `http-backend:5000`
