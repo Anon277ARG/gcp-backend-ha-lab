@@ -68,7 +68,7 @@ Se crearon dos VMs manuales:
   <img src="Capturas GCP/app.py.png" alt="Panel de VMs en GCP" width="850">
   <br>
   <kbd>Figura 4</kbd> <br>
-  <em>"SScript app.py: Lógica del servidor web Flask configurada para responder por el puerto 5000. Cada instancia se gestiona de forma individual, permitiendo la ejecución del servicio y la muestra de imágenes dinámicas para validar visualmente que el balanceador de carga está distribuyendo el tráfico entre los diferentes nodos"</em>
+  <em>"SScript app.py: Lógica del servidor web python (Flask) configurada para responder por el puerto 5000. Cada instancia se gestiona de forma individual, permitiendo la ejecución del servicio y la muestra de imágenes dinámicas para validar visualmente que el balanceador de carga está distribuyendo el tráfico entre los diferentes nodos"</em>
 </p>
 
 Características:
@@ -143,12 +143,15 @@ Se validó:
 - failover funcional al apagar una VM
 - health checks funcionando correctamente
 
-### Problemas encontrados y resueltos
-- error de sintaxis en requests del health check
-- puerto `5000` ocupado por procesos previos
-- errores al intentar arrancar el servicio Python
-- confusión entre archivos locales, Cloud Shell y archivos dentro de la VM
-- uso inicial de `apt` en startup script bloqueado por `unattended-upgrades`
+
+<details>
+<summary><b>🔍 Ver Log de Troubleshooting (Click para desplegar)</b></summary>
+
+- **Error de sintaxis:** Corrección de rutas en los requests del health check.
+- **Conflictos de puerto:** Liberación del puerto 5000 ocupado por sesiones previas.
+- **Startup Scripts:** Identificación del bloqueo de `apt` por procesos automáticos del sistema (`unattended-upgrades`).
+</details>
+
 
 ## Demo visual
 
