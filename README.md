@@ -120,6 +120,13 @@ Se validó:
 - failover al apagar una de las VMs
 - health checks exitosos con respuesta HTTP 200
 
+<p align="center">
+  <img src="Capturas GCP/loadbalancermonitoring.png" alt="Panel de VMs en GCP" width="850">
+  <br>
+  <kbd>Figura 5</kbd> <br>
+  <em>"Verificación de Health Checks exitosa: Confirmación de disponibilidad de las instancias mediante el puerto TCP:5000, validando la correcta configuración de las reglas de Firewall Ingress."</em>
+</p>
+
 ## Pruebas realizadas
 
 ### Validaciones correctas
