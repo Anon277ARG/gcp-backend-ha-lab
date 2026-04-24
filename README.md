@@ -48,7 +48,7 @@ Primary tag used:
 
 - `backend`
 
-## Relevant rules:
+### Relevant rules:
 - allow internal HTTP traffic to port 5000
 - allow Google Cloud health checks
 - allow Load Balancer traffic to the backends
@@ -57,21 +57,22 @@ Primary tag used:
   <img src="Capturas GCP/firewall.png" alt="Panel de VMs en GCP" width="850">
   <br>
   <kbd>Figura 2</kbd> <br>
-  <em>"apertura selectiva del puerto 5000 y habilitación de Health Checks para el correcto funcionamiento del balanceador de carga. Esta configuración garantiza que solo el tráfico legítimo alcance las instancias, manteniendo la integridad de la red interna y optimizando la disponibilidad del servicio mediante el monitoreo constante del estado de las VMs."</em>
+  <em>"Selective opening of port 5000 and enabling of Health Checks for the correct operation of the load balancer. This configuration ensures that only legitimate traffic reaches the instances, maintaining the integrity of the internal network and optimizing service availability through the constant monitoring of the status of the VMs."</em>
 </p>
 
 
 ### Backends
-Se crearon dos VMs manuales:
+Two manual WMs were created:
 
-- una en `southamerica-west1-a`
-- una en `southamerica-west1-b`
+- one in `southamerica-west1-a`
+- one in `southamerica-west1-b`
+
 
 <p align="center">
   <img src="Capturas GCP/app.py.png" alt="Panel de VMs en GCP" width="850">
   <br>
   <kbd>Figura 3</kbd> <br>
-  <em>"SScript app.py: Lógica del servidor web python (Flask) configurada para responder por el puerto 5000. Cada instancia se gestiona de forma individual, permitiendo la ejecución del servicio y la muestra de imágenes dinámicas para validar visualmente que el balanceador de carga está distribuyendo el tráfico entre los diferentes nodos"</em>
+  <em>"app.pyy Script: Python web server logic (Flask) configured to respond on port 5000. Each instance is managed individually, allowing the service to run and display dynamic images to visually validate that the load balancer is distributing traffic across thhe different nodes."</em>
 </p>
 
 Características:
