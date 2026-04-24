@@ -110,34 +110,34 @@ Configured named port:
   <img src="Capturas GCP/instancegroups.png" alt="Panel de VMs en GCP" width="850">
   <br>
   <kbd>Figura 5</kbd> <br>
-  <em>"Vista detallada de los Unmanaged Instance Groups donde se configuró el mapeo de servicios mediante puertos con nombre (Named Ports). Esta definición es fundamental para que el Backend Service del Load Balancer pueda comunicarse con las aplicaciones que corren en el puerto TCP 5000 dentro de cada máquina virtual."</em>
+  <em>"Detailed view of the Unmanaged Instance Groups where service mapping was configured using Named Ports. This definition is essential for the Load Balancer's Backend Service to communicate with the applications running on TCP port 5000 within each virtual machine."</em>
 </p>
 
 ### Load Balancer
-Se configuró un Application Load Balancer HTTP externo con:
+An external HTTP Application Load Balancer was configured with:
 
-- frontend público en puerto `80`
-- backend service basado en instance groups
-- health check HTTP al path `/` sobre puerto `5000`
+- public frontend on port `80`
+- backend service based on instance groups
+- HTTP health check to path `/` on port `5000`
 
 <p align="center">
   <img src="Capturas GCP/loadbalancer.png" alt="Panel de VMs en GCP" width="850">
   <br>
   <kbd>Figura 6</kbd> <br>
-  <em>"Verificación de Health Checks exitosa: Confirmación de disponibilidad de las instancias mediante el puerto TCP:5000, validando la correcta configuración de las reglas de Firewall Ingress."</em>
+  <em>"Successful Health Check verification: Confirmation of instance availability through TCP port 5000, validating the correct configuration of the Ingress Firewall rules."</em>
 </p>
 
-## Funcionamiento
+## Operation
 
-El Load Balancer distribuye tráfico entre dos backends privados ubicados en distintas zonas.
+The Load Balancer distributes traffic between two private backends located in different zones.
 
-Se validó:
+Validated:
 
-- acceso público al balanceador
-- llegada del tráfico a instancias sin IP pública
-- distribución de tráfico entre backends
-- failover al apagar una de las VMs
-- health checks exitosos con respuesta HTTP 200
+- public access to the balancer
+- traffic delivery to instances without public IPs
+- traffic distribution between backends
+- failover when shutting down one of the VMs
+- successful health checks with HTTP 200 response
 
 <p align="center">
   <img src="Capturas GCP/loadbalancermonitoring.png" alt="Panel de VMs en GCP" width="850">
