@@ -88,13 +88,6 @@ Each backend responds with different content, allowing for visual validation of 
   <em>"Screenshoot of the Compute Engine panel showing the multi-zone implementation. The absence of public IPs on the instances is observed to ensure perimeter security, allowing access only through the Load Balancer or via SSH/IAP."</em>
 </p>
 
-### Instance Groups
-Se utilizaron dos unmanaged instance groups:
-
-- uno por zona
-- cada uno contiene una VM
-Named port configurado:
-
 
 
 ### Instance Groups
