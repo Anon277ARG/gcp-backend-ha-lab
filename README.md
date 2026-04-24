@@ -170,12 +170,12 @@ In one of the tests, each VM showed a different image through the Load Balancer,
       <td align="center">
         <img src="Capturas GCP/pipifeliz.png" width="300px"><br>
         <b>Instancia A: Nodo 1</b><br>
-        <i>Estado: Pipi Feliz</i>
+        <i>Estado: Pipi is happy</i>
       </td>
       <td align="center">
         <img src="Capturas GCP/pipienojado.png" width="300px"><br>
         <b>Instancia B: Nodo 2</b><br>
-        <i>Estado: Pipi Enojado</i>
+        <i>Estado: Pipi is mad</i>
       </td>
     </tr>
   </table>
