@@ -180,28 +180,28 @@ In one of the tests, each VM showed a different image through the Load Balancer,
     </tr>
   </table>
   <p align="center">
-    <sub><b>Evidencia técnica:</b> El Load Balancer distribuye las peticiones entre los distintos backends, 
-    permitiendo que cada nodo responda con una imagen diferente según la lógica del script <code>app.py</code>.</sub>
+    <sub><b>Technical evidence:</b> EThe Load Balancer distributes the requests among the different backends,
+allowing each node to respond with a different image according to the script's logic<code>app.py</code>.</sub>
   </p>
 
   <br>
 
   <p align="center">
-    <b>Y para finalizar con la retórica de LinkedIn...</b><br>
-    les presento al ser más hermoso del mundo: <b>Pipi (Máximo)</b>, el verdadero motor y la inspiración detrás de cada línea de código y cada configuración en la nube. 👶💙
+    <b>And to finish with the LinkedIn rhetoric...</b><br>
+    I present to you the most beautiful being in the world: <b>Pipi (Máximo)</b>,the true engine and the inspiration behind every line of code and every cloud configuration. 👶💙
   </p>
 </div>
 
-## Próximos pasos
+## Next steps
 
-- validar instance template corregido
-- migrar a Managed Instance Group
-- configurar autohealing
-- reemplazar unmanaged instance groups
-- eliminar intervención manual por SSH
-- dejar la arquitectura lista para escalar
+- validate corrected instance template
+- migrate to Managed Instance Group
+- configure autohealing
+- replace unmanaged instance groups
+- eliminate manual SSH intervention
+- leave the architecture ready to scale
 
-## Tecnologías utilizadas
+## Technologies used
 
 - Google Cloud Platform
 - Compute Engine
@@ -212,23 +212,22 @@ In one of the tests, each VM showed a different image through the Load Balancer,
 - Health Checks
 - Python `http.server`
 
-## Aprendizajes principales
+## Key learnings
 
-Este proyecto permitió entender en la práctica:
-
-- diferencia entre recursos zonales, regionales y globales
-- funcionamiento real de un Load Balancer
-- relación entre backend service, instance groups y health checks
-- importancia de validar cada capa por separado
-- problemas reales de debugging al trabajar con infraestructura
+- This project allowed for a practical understanding of:
+- difference between zonal, regional, and global resources
+- real-world functioning of a Load Balancer
+- relationship between backend service, instance groups, and health checks
+- importance of validating each layer separately
+- real-world debugging issues when working with infrastructure
 
 ---
 
 <p align="center">
-  ¿Querés conectar conmigo o saber más sobre mis proyectos en Google Cloud? <br>
+  Do you want to connect with me or learn more about my projects on Google Cloud? <br>
   <a href="https://www.linkedin.com/in/ulises-acu%C3%B1a-bianchi-6a36961b4/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Profile">
   </a>
   <br>
-  <sub>Desarrollado con ❤️ Ulises Acuña Bianchi - 2026</sub>
+  <sub>developed with ❤️ by Ulises Acuña Bianchi - 2026</sub>
 </p>
