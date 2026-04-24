@@ -77,7 +77,7 @@ Two manual WMs were created:
 
 Characteristics:
 - no public IP
-- SSH access
+- SSH accesss
 - simple Python service running on port `5000`
 Each backend responds with different content, allowing for visual validation of the Load Balancer's traffic distribution.
 
@@ -85,7 +85,7 @@ Each backend responds with different content, allowing for visual validation of 
   <img src="Capturas GCP/VMs.png" alt="Panel de VMs en GCP" width="850">
   <br>
   <kbd>Figura 4</kbd> <br>
-  <em>"Screenshot of the Compute Engine panel showing the multi-zone implementation. The absence of public IPs on the instances is observed to ensure perimeter security, allowing access only through the Load Balancer or via SSH/IAP."</em>
+  <em>"Screenshoot of the Compute Engine panel showing the multi-zone implementation. The absence of public IPs on the instances is observed to ensure perimeter security, allowing access only through the Load Balancer or via SSH/IAP."</em>
 </p>
 
 ### Instance Groups
@@ -143,31 +143,33 @@ Validated:
   <img src="Capturas GCP/loadbalancermonitoring.png" alt="Panel de VMs en GCP" width="850">
   <br>
   <kbd>Figura 7</kbd> <br>
-  <em>"En la fase inicial de pruebas (como se ve en la captura), el gráfico de monitoreo registró tráfico en estado 'Invalid'. Esto ocurrió porque el balanceador recibió peticiones antes de que las instancias completaran el proceso de Health Check. Una vez que el firewall permitió el paso de las sondas de salud y las instancias pasaron a estado 'Healthy', el tráfico comenzó a fluir correctamente hacia los Backends, estabilizando el servicio."</em>
+  <em>"In the initial testing phase (as seen in the screenshot), the monitoring chart registered traffic in an 'Invalid' state. This occurred because the load balancer received requests before the instances completed the Health Check process. Once the firewall allowed the health probes to pass and the instances transitioned to a 'Healthy' state, traffic began to flow correctly to the Backends, stabilizing the service."</em>
 </p>
 
-## Pruebas realizadas
+## Performed tests
 
-### Validaciones correctas
-- Load Balancer accesible desde IP pública
-- backends privados respondiendo correctamente
-- tráfico distribuido entre instancias
-- failover funcional al apagar una VM
-- health checks funcionando correctamente
+### Correct validations
 
-### Problemas encontrados y resueltos
+- Load Balancer accessible from public IP
+- private backends responding correctly
+- traffic distributed between instances
+- functional failover when turning off a VM
+- health checks working correctly
 
-- error de sintaxis en requests del health check
-- puerto `5000` ocupado por procesos previos
-- errores al intentar arrancar el servicio Python
-- confusión entre archivos locales, Cloud Shell y archivos dentro de la VM
-- uso inicial de `apt` en startup script bloqueado por `unattended-upgrades`
+### Problems found and resolved
+
+- syntax error in health check requests
+- port 5000 occupied by previous processes
+- errors when trying to start the Python service
+- confusion between local files, Cloud Shell, and files within the VM
+- initial use of apt in startup script blocked by unattended-upgrades
 
 
-## Demo visual
 
-Como prueba visual del balanceo, cada backend sirve contenido diferente.  
-En una de las pruebas, cada VM mostró una imagen distinta a través del Load Balancer, permitiendo observar claramente el cambio de backend al refrescar.
+## Visual demo
+
+As visual proof of the balancing, each backend serves different content.
+In one of the tests, each VM showed a different image through the Load Balancer, allowing the change of backend to be clearly observed upon refreshing.
 
 <div align="center">
   <table>
