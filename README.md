@@ -13,42 +13,44 @@ Build a simple yet realistic web architecture featuring:
 - Multi-zone high availability
 - Subsequent migration to Managed Instance Groups (MIG)
 
-## Arquitectura actual
+## Current Architecture
 
-La arquitectura actual está compuesta por:
+The current architecture consists of:
 
-- 1 VPC custom
-- 1 subred con rango `10.0.0.0/24`
-- 2 máquinas virtuales privadas en zonas distintas
-- 2 unmanaged instance groups
-- 1 Application Load Balancer HTTP público
-- 1 health check HTTP sobre el puerto `5000`
+- 1 Custom VPC
+- 1 Subnet** with the range `10.0.0.0/24`
+- 2 Private Virtual Machines in different zones
+- 2 Unmanaged Instance Groups
+- 1 Public HTTP Application Load Balancer
+- 1 HTTP Health Check** on port `5000`
 
-## Componentes
+## Components
 
-### Red
-- VPC custom creada manualmente
-- subred configurada dentro del rango `10.0.0.0/24`
-- conectividad interna entre instancias validada
+### Network
+- Custom VPC manually created
+- Subnet setup with the range `10.0.0.0/24`
+- Internal connectivity between instances verified
 
+  
 <p align="center">
   <img src="Capturas GCP/subred.png" alt="Panel de VMs en GCP" width="850">
   <br>
   <kbd>Figura 1</kbd> <br>
-  <em>"Captura del panel de subredes en Google Cloud. Se observa la segmentación regional de la red default, destacando la subred activa en southamerica-west1 (Santiago, Chile). Esta configuración asegura que los recursos del proyecto estén localizados geográficamente para minimizar la latencia hacia los usuarios finales en la región."</em>
+  <em>"Screenshot of the subnets panel in Google Cloud. The regional segmentation of the default network is observed, highlighting the active subnet in southamerica-west1 (Santiago, Chile). This configuration ensures that the project resources are geographically located to minimize latency for end users in the region."</em>
 </p>
 
-### Firewall
-Reglas configuradas mediante network tags.
 
-Tag principal utilizado:
+
+### Firewall
+Rules configured via network tags.
+
+Primary tag used:
 
 - `backend`
-
-Reglas relevantes:
-- permitir tráfico HTTP interno al puerto `5000`
-- permitir health checks de Google Cloud
-- permitir tráfico del Load Balancer hacia los backends
+Relevant rules:
+- allow internal HTTP traffic to port 5000
+- allow Google Cloud health checks
+- allow Load Balancer traffic to the backends
 
 <p align="center">
   <img src="Capturas GCP/firewall.png" alt="Panel de VMs en GCP" width="850">
