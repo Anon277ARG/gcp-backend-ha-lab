@@ -75,18 +75,17 @@ Two manual WMs were created:
   <em>"app.pyy Script: Python web server logic (Flask) configured to respond on port 5000. Each instance is managed individually, allowing the service to run and display dynamic images to visually validate that the load balancer is distributing traffic across thhe different nodes."</em>
 </p>
 
-Características:
-- sin IP pública
-- acceso por SSH
-- servicio Python simple corriendo en puerto `5000`
-
-Cada backend responde contenido distinto, lo que permite validar visualmente la distribución de tráfico del Load Balancer.
+Characteristics:
+- no public IP
+- SSH access
+- simple Python service running on port `5000`
+Each backend responds with different content, allowing for visual validation of the Load Balancer's traffic distribution.
 
 <p align="center">
   <img src="Capturas GCP/VMs.png" alt="Panel de VMs en GCP" width="850">
   <br>
   <kbd>Figura 4</kbd> <br>
-  <em>"Captura del panel de Compute Engine mostrando la implementación multi-zona. Se observa la ausencia de IPs públicas en las instancias para garantizar la seguridad perimetral, permitiendo únicamente el acceso a través del Load Balancer o vía SSH/IAP."</em>
+  <em>"Screenshot of the Compute Engine panel showing the multi-zone implementation. The absence of public IPs on the instances is observed to ensure perimeter security, allowing access only through the Load Balancer or via SSH/IAP."</em>
 </p>
 
 ### Instance Groups
@@ -96,6 +95,15 @@ Se utilizaron dos unmanaged instance groups:
 - cada uno contiene una VM
 Named port configurado:
 
+
+
+### Instance Groups
+Two unmanaged instance groups were used:
+
+- one per zone
+- each one contains a VM
+
+Configured named port:
 - `http-backend:5000`
 
 <p align="center">
