@@ -1,17 +1,17 @@
 # GCP Load Balancer with Private Backends
 Backend high availability architecture in GCP with Load Balancer and private VMs
 
-Proyecto práctico en Google Cloud Platform orientado a aprender conceptos de infraestructura backend y alta disponibilidad.
+Hands-on Google Cloud Platform project focused on mastering backend infrastructure and high availability concepts.
 
-## Objetivo
+##Objective
 
-Construir una arquitectura web simple pero realista con:
+Build a simple yet realistic web architecture featuring:
 
-- backends privados
-- load balancer público
-- health checks
-- alta disponibilidad entre zonas
-- migración posterior a Managed Instance Groups (MIG)
+-Private backends
+-Public load balancer
+-Health checks
+-Multi-zone high availability
+-Subsequent migration to Managed Instance Groups (MIG)
 
 ## Arquitectura actual
 
