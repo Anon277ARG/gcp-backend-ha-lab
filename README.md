@@ -18,7 +18,7 @@ Build a simple yet realistic web architecture featuring:
 The current architecture consists of:
 
 - 1 Custom VPC
-- 1 Subnet** with the range `10.0.0.0/24`
+- 1 Subnet with the range `10.0.0.0/24`
 - 2 Private Virtual Machines in different zones
 - 2 Unmanaged Instance Groups
 - 1 Public HTTP Application Load Balancer
@@ -62,7 +62,7 @@ Primary tag used:
 
 
 ### Backends
-Two manual WMs were created:
+Two manual VMs were created:
 
 - one in `southamerica-west1-a`
 - one in `southamerica-west1-b`
@@ -72,12 +72,12 @@ Two manual WMs were created:
   <img src="Capturas GCP/app.py.png" alt="Panel de VMs en GCP" width="850">
   <br>
   <kbd>Figura 3</kbd> <br>
-  <em>"app.pyy Script: Python web server logic (Flask) configured to respond on port 5000. Each instance is managed individually, allowing the service to run and display dynamic images to visually validate that the load balancer is distributing traffic across thhe different nodes."</em>
+  <em>"app.py Script: Python web server logic (Flask) configured to respond on port 5000. Each instance is managed individually, allowing the service to run and display dynamic images to visually validate that the load balancer is distributing traffic across thhe different nodes."</em>
 </p>
 
 Characteristics:
 - no public IP
-- SSH accesss
+- SSH access
 - simple Python service running on port `5000`
 Each backend responds with different content, allowing for visual validation of the Load Balancer's traffic distribution.
 
@@ -85,7 +85,7 @@ Each backend responds with different content, allowing for visual validation of 
   <img src="Capturas GCP/VMs.png" alt="Panel de VMs en GCP" width="850">
   <br>
   <kbd>Figura 4</kbd> <br>
-  <em>"Screenshoot of the Compute Engine panel showing the multi-zone implementation. The absence of public IPs on the instances is observed to ensure perimeter security, allowing access only through the Load Balancer or via SSH/IAP."</em>
+  <em>"Screenshot of the Compute Engine panel showing the multi-zone implementation. The absence of public IPs on the instances is observed to ensure perimeter security, allowing access only through the Load Balancer or via SSH/IAP."</em>
 </p>
 
 
@@ -180,15 +180,15 @@ In one of the tests, each VM showed a different image through the Load Balancer,
     </tr>
   </table>
   <p align="center">
-    <sub><b>Technical evidence:</b> EThe Load Balancer distributes the requests among the different backends,
-allowing each node to respond with a different image according to the script's logic<code>app.py</code>.</sub>
+    <sub><b>Technical evidence:</b> The Load Balancer distributes the requests among the different backends,
+allowing each node to respond with a different image according to the script's logic <code>app.py</code>.</sub>
   </p>
 
   <br>
 
   <p align="center">
     <b>And to finish with the LinkedIn rhetoric...</b><br>
-    I present to you the most beautiful being in the world: <b>Pipi (Máximo)</b>,the true engine and the inspiration behind every line of code and every cloud configuration. 👶💙
+    I present to you the most beautiful being in the world: <b>Pipi (Máximo)</b>, the true engine and the inspiration behind every line of code and every cloud configuration. 👶💙
   </p>
 </div>
 
