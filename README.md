@@ -47,7 +47,8 @@ Rules configured via network tags.
 Primary tag used:
 
 - `backend`
-Relevant rules:
+
+## Relevant rules:
 - allow internal HTTP traffic to port 5000
 - allow Google Cloud health checks
 - allow Load Balancer traffic to the backends
